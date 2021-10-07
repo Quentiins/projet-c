@@ -20,7 +20,6 @@ int main(void)
     filmCategorieAdulte[2] = "Conjuring";
 
 
-    int a = 0;
     int age = get_int("Quel est votre âge?\n");
 
     if (age < 11){ // Si l'âge est inférieur à 11 ans , alors les films pour enfants seront proposés. Si l'enfant répond non , deux autres films seront proposés sinon si l'enfant répond oui , le message lui indiquant d'aller dans la salle s'affiche.
@@ -28,7 +27,6 @@ int main(void)
          for ( int i = 0; i < 3; i++ ){
              char c = get_char("Voulez-vous voir le film %s ?\n", filmCategorieEnfant[i]);
              if (c== 'N' || c== 'n'){
-                a= a+1; // ajoute +1 à la variable a pour passer au film suivant.
              }else if (c== 'O' || c== 'o'){
                  printf("Vous pouvez aller voir votre film dans la salle correspondante.\n");
                  return 0;
@@ -40,7 +38,6 @@ int main(void)
          for ( int i = 0; i < 3; i++ ){
              char c = get_char("Voulez-vous voir le film %s ?\n", filmCategorieAdos[i]);
              if (c== 'N' || c== 'n'){
-                a= a+1;
              }else if (c== 'O' || c== 'o'){
                  printf("Vous pouvez aller voir votre film dans la salle correspondante.\n");
                  return 0;
@@ -51,7 +48,6 @@ int main(void)
          for ( int i = 0; i < 3; i++ ){
              char c = get_char("Voulez-vous voir le film %s ?\n", filmCategorieAdulte[i]);
              if (c== 'N' || c== 'n'){
-                a= a+1;
              }else if (c== 'O' || c== 'o'){
                  printf("Vous pouvez aller voir votre film dans la salle correspondante.\n");
                  return 0;
